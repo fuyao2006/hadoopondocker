@@ -1,0 +1,4 @@
+* soft nofile 65535
+* hard nofile 65535
+* soft nproc 32000
+* hard nproc 32000

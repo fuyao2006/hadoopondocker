@@ -1,0 +1,19 @@
+
+export JAVA_HOME=/usr/java/latest
+export SCALA_HOME=/usr/share/scala
+export HADOOP_HOME=/home/hadoop/data/hadoop
+export HIVE_HOME=/home/hadoop/data/hive
+export ZOOKEEPER_HOME=/home/hadoop/data/zookeeper
+export HBASE_HOME=/home/hadoop/data/hbase
+export SPARK_HOME=/home/hadoop/data/spark
+export KAFKA_HOME=/home/hadoop/data/kafka
+export TEZ_HOME=/home/hadoop/data/tez
+export SQOOP_HOME=/home/hadoop/data/sqoop
+export FLUME_HOME=/home/hadoop/data/flume
+export STORM_HOME=/home/hadoop/data/storm
+export FLINK_HOME=/home/hadoop/data/flink
+
+export ZOOKEEPER_DATA_HOME=${ZOOKEEPER_HOME}/data
+
+export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin:$SCALA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HIVE_HOME/bin:$ZOOKEEPER_HOME/bin:$HBASE_HOME/bin:$SPARK_HOME/bin:$KAFKA_HOME/bin:$TEZ_HOME/bin:$SQOOP_HOME/bin:$FLUME_HOME/bin:$STORM_HOME/bin:$FLINK_HOME/bin
