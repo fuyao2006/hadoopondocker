@@ -1,0 +1,8 @@
+下载之后 先运行 sudo ./builddocker.sh  创建基础镜像
+sudo docker network create hadoop 创建网络
+sudo ./start-hadoop.sh   启动docker集群 
+
+进去之后 
+大数据的组件需要自己启动，暂未提供一键启动
+目前应该支持，kafka zookeepr hbase spark hadoop
+例如：可以使用start-all.sh 启动hadoop集群
