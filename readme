@@ -1,0 +1,28 @@
+0download.sh  下载需要安装的组件
+手动删除 各组件的 说明 帮助 源码等
+1create_tar.sh 打包放到指定的目录下
+
+
+20190916 修改
+
+Dockerfile:
+#sed -i "/GSSAPIAuthentication /c   GSSAPIAuthentication no" /etc/ssh/sshd_config &&\
+chmod 777 /etc/ssh/ssh_host_rsa_key
+chmod 600 .ssh/config
+
+docker-entrypoint.sh:
+sudo -u hadoop /home/hadoop/data/zookeeper/bin/zkServer.sh start &
+
+
+core-site.xml
+删除这几行
+  com.hadoop.compression.lzo.LzoCodec,
+  com.hadoop.compression.lzo.LzopCodec,
+  org.apache.hadoop.io.compress.Lz4Codec,
+
+
+20190918修改
+打包同时
+chown -R hadoop.hadoop $i
+
+#chown -R ${hadoopuser}.${hadoopuser} ${workdir}  &&\  这个会新加一层 造成镜像很大

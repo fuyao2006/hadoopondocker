@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<configuration>
+
+<property>  
+    <name>fs.defaultFS</name>  
+    <value>hdfs://ns1</value>  
+</property> 
+
+<!-- Resource Manager UI的默认用户dr.who权限不正确 ,这里写上你的机器用户名-->
+<property>  
+    <name>hadoop.http.staticuser.user</name>  
+    <value>${hadoopuser}</value>  
+</property>
+
+<property>  
+    <name>ha.zookeeper.quorum</name>  
+    <value>${master}:2181,${slave1}:2181,${slave1}:2181</value>  
+</property> 
+
+<!--修改core-site.xml中的ipc参数,防止出现连接journalnode服务ConnectException-->
+<property>
+    <name>ipc.client.connect.max.retries</name>
+    <value>100</value>
+    <description>Indicates the number of retries a client will make to establish a server connection.</description>
+</property>
+<property>
+    <name>ipc.client.connect.retry.interval</name>
+    <value>10000</value>
+    <description>Indicates the number of milliseconds a client will wait for before retrying to establish a server connection.</description>
+</property>
+
+
+<property>
+  <name>io.compression.codecs</name>
+  <value>
+  org.apache.hadoop.io.compress.DefaultCodec,
+  org.apache.hadoop.io.compress.GzipCodec,
+  org.apache.hadoop.io.compress.BZip2Codec,
+  org.apache.hadoop.io.compress.SnappyCodec
+  </value>
+  <description>A comma-separated list of the compression codec classes that can
+  be used for compression/decompression. In addition to any classes specified
+  with this property (which take precedence), codec classes on the classpath
+  are discovered using a Java ServiceLoader.</description>
+</property>
+
+
+<property>
+  <name>hadoop.tmp.dir</name>
+  <value>${htmpdir}</value>
+  <description>A base for other temporary directories.</description>
+</property>
+
+<property>
+  <name>io.file.buffer.size</name>
+  <value>131072</value>
+</property>
+
+<property>
+<name>hadoop.proxyuser.${hadoopuser}.hosts</name>
+<value>*</value>
+</property>
+<property>
+<name>hadoop.proxyuser.${hadoopuser}.groups</name>
+<value>*</value>
+</property>
+
+
+</configuration>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<configuration>
+
+<property>
+
+<name>tez.lib.uris</name>
+
+<value>hdfs://ns1/tez/tez.tar.gz</value>
+
+</property>
+
+</configuration>

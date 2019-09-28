@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export JAVA_HOME=${java_home}
+export HBASE_CLASSPATH=${workdir}/hadoop/etc/hadoop
+export HBASE_MANAGES_ZK=false
+export HBASE_LOG_DIR=${workdir}/hbase/logs

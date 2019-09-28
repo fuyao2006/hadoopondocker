@@ -1,0 +1,17 @@
+#下载地址
+zookeeper_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/stable/apache-zookeeper-3.5.5-bin.tar.gz
+hadoop_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-2.9.2/hadoop-2.9.2.tar.gz
+hive_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/hive/stable-2/apache-hive-2.3.6-bin.tar.gz
+hbase_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/stable/hbase-1.4.10-bin.tar.gz
+spark_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz
+kafka_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/kafka/2.3.0/kafka_2.12-2.3.0.tgz
+tez_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/tez/0.9.2/apache-tez-0.9.2-bin.tar.gz
+#sqoop_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz
+flume_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/flume/stable/apache-flume-1.9.0-bin.tar.gz
+flink_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/flink/flink-1.9.0/flink-1.9.0-bin-scala_2.12.tgz
+scala_wget=https://downloads.lightbend.com/scala/2.12.10/scala-2.12.10.tgz
+
+#zeppelin_wget=
+#redis=
+#storm_wget=https://mirrors.tuna.tsinghua.edu.cn/apache/storm/apache-storm-1.0.6/apache-storm-1.0.6.tar.gz
+#java_wget=https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.rpm

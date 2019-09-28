@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#sudo docker build -t hadoopbase 
-
 # the default node number is 3
 N=${1:-3}
 
@@ -27,12 +25,13 @@ sudo docker run -itd \
                 -p 8042:8042 \
                 -p 49707:49707 \
                 -p 2122:2122 \
-		-p 30022:22 \
+										-p 30022:22 \
                 -p 8088:8088 \
                 -v /usr/local/hadoop \
                 --name hdp-master \
                 --hostname hdp-master \
-                hadoopbase  &> /dev/null
+                hadoopbase bash
+# &> /dev/null
 
 
 # start hadoop slave container
@@ -45,10 +44,9 @@ do
 	                --net=hadoop \
 	                --name hdp-slave$i \
 	                --hostname hdp-slave$i \
-	                hadoopbase  &> /dev/null
+	                hadoopbase bash
 	i=$(( $i + 1 ))
 done 
-
+#docker attach hdp-master
 # get into hadoop master container
-sudo docker attach hdp-master
-
+sudo docker exec -it hdp-master su - hadoop
