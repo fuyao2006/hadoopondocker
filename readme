@@ -21,8 +21,3 @@ core-site.xml
   org.apache.hadoop.io.compress.Lz4Codec,
 
 
-20190918修改
-打包同时
-chown -R hadoop.hadoop $i
-
-#chown -R ${hadoopuser}.${hadoopuser} ${workdir}  &&\  这个会新加一层 造成镜像很大
