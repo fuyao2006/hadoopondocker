@@ -1,3 +1,7 @@
+注意此版本第一次启动时要格式化集群，做一些简单配置，次版本支持namenode,resourcemanager高可用，启动脚本整理中………
+
+
+
 0download.sh  下载需要安装的组件
 手动删除 各组件的 说明 帮助 源码等
 1create_tar.sh 打包放到指定的目录下
